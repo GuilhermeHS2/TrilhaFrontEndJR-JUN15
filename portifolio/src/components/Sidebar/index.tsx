@@ -9,8 +9,16 @@ export default function Sidebar() {
         <div>
             <div className="flex flex-col gap-6 overflow-hidden rounded-2xl border border-[#e53939] p-4">
                 <div className="flex items-center justify-between">
-                    <h1 className="font-bold text-[#e53939]">Logo</h1>
-                    <p className="text-[#e53939]">Dev Junior</p>
+                    <p className="text-2xl text-[#e53939]">Desenvolvedor Front-end</p>
+
+                    <Image
+                        src="/images/Certo.png"
+                        width={88}
+                        height={88}
+                        alt="Logo do Código Certo Coders"
+                    />
+
+                    
                 </div>
 
                 <div className="max-w-md overflow-hidden rounded-2xl shadow-lg ">

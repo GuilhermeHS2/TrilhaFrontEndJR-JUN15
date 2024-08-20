@@ -2,4 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* No seu arquivo CSS global */
+body {
+    background-color: #000000; /* Fundo preto */
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, transparent, transparent 80%, rgba(229, 57, 57, 0.7) 90%, transparent),
+                radial-gradient(circle at 30% 20%, transparent, transparent 70%, rgba(229, 57, 57, 0.6) 80%, transparent),
+                radial-gradient(circle at 70% 80%, transparent, transparent 70%, rgba(229, 57, 57, 0.5) 80%, transparent),
+                radial-gradient(circle at 20% 70%, transparent, transparent 60%, rgba(229, 57, 57, 0.4) 70%, transparent),
+                radial-gradient(circle at 80% 30%, transparent, transparent 60%, rgba(229, 57, 57, 0.3) 70%, transparent);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    animation: moveRays 10s infinite linear;
+}
+
+@keyframes moveRays {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
 

@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* No seu arquivo CSS global */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
-    background-color: #000000; /* Fundo preto */
+    background-color: #000000; 
     position: relative;
-    overflow: hidden;
+    overflow-y: hidden; 
     min-height: 100vh;
 }
 
@@ -37,4 +41,3 @@ body::before {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-
